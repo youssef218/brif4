@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+    src="https://kit.fontawesome.com/a602b3a089.js"
+    crossorigin="anonymous"
+  ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>permutation de deux nombres</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <span
+            ><img src="javascriptlogo.png" alt="logojavascript" >learning
+            javascript</span
+          >
+        </div>
+        <!-- nav -->
+        <div class="menu-button">
+          <div class="bar"></div>
+        </div>
+
+        <div class="menu">
+          <ul class="menu-list">
+            <li class="menu-link">
+              <a
+                href="file:///C:/Users/hp/Desktop/brief%20projet%204/permutation%20de%20deux%20nombres/permutation%20de%20deux%20nombres.html"
+                target="_blank"
+                >Variables et affectation</a
+              >
+            </li>
+            <li class="menu-link">
+              <a
+                href="file:///C:/Users/hp/Desktop/brief%20projet%204/validation%20d'une%20date/VD.html"
+                target="_blank"
+                >Conditions</a
+              >
+            </li>
+            <li class="menu-link">
+              boucles
+              <ul>
+                <li>
+                  <i class="fa-solid fa-arrow-right"></i
+                  ><a
+                    href="file:///C:/Users/hp/Desktop/brief%20projet%204/table%20de%20multiplication/TB.html"
+                    target="_blank"
+                  >
+                    La boucle for</a
+                  >
+                </li>
+                <li>
+                  <i class="fa-solid fa-arrow-right"></i
+                  ><a
+                    href="file:///C:/Users/hp/Desktop/brief%20projet%204/devine%20le%20nombre/DN.html"
+                    target="_blank"
+                  >
+                    La boucle while</a
+                  >
+                </li>
+                <li>
+                  <i class="fa-solid fa-arrow-right"></i
+                  ><a
+                    href="file:///C:/Users/hp/Desktop/brief%20projet%204/losagne%20en%20%C3%A9toile/LE.html"
+                    target="_blank"
+                  >
+                    Les boucles imbriquées</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="menu-link">
+              Chaines de caractères
+              <ul>
+                <li>
+                  <i class="fa-solid fa-arrow-right"></i
+                  ><a
+                    href="file:///C:/Users/hp/Desktop/brief%20projet%204/recherche%20et%20suppression%20dans%20une%20chaine/recherche%20et%20suppression%20dans%20une%20chaine.html"
+                    target="_blank"
+                  >
+                    Recherche et suppression</a
+                  >
+                </li>
+                <li>
+                  <i class="fa-solid fa-arrow-right"></i
+                  ><a
+                    href="file:///C:/Users/hp/Desktop/brief%20projet%204/compter%20le%20nombre%20de%20voyelles%20dans%20chaine/compter%20le%20nombre%20de%20voyelles%20dans%20chaine.html"
+                    target="_blank"
+                  >
+                    Nombre de voyelles</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="menu-link">
+              Tableaux
+              <ul>
+                <li>
+                  <i class="fa-solid fa-arrow-right"></i
+                  ><a
+                    href="file:///C:/Users/hp/Desktop/brief%20projet%204/tri%20d'un%20tableau/tri%20d'un%20tableau.html"
+                    target="_blank"
+                  >
+                    Tri</a
+                  >
+                </li>
+                <li>
+                  <i class="fa-solid fa-arrow-right"></i
+                  ><a
+                    href="file:///C:/Users/hp/Desktop/brief%20projet%204/recherche%20dans%20un%20tableau/recherche%20dans%20un%20tableau.html"
+                    target="_blank"
+                  >
+                    Recherche</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="menu-link">
+              <a
+                href="file:///C:/Users/hp/Desktop/brief%20projet%204/calculatrice/calculatrice.html"
+                target="_blank"
+                >Fonctions</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="titre-art">
+        <h3>Enonce</h3>
+      </div>
+      <div class="exercice">
+        <p>
+          Ecrire un programme Javascript qui permet de trier un tableau d’entier
+          (Utiliser n’importe quel algorithme de tri mais surtout pas la
+          fonction Sort de l’objet Array). L’utilisateur commence tout d’abord
+          par saisir la taille du tableau, ensuite il remplit le tableau pour
+          cliquer à la fin sur un bouton trier : celui-ci affichera le tableau
+          en ordre croissant ou décroissant.
+        </p>
+      </div>
+      <div class="titre-art margin">
+        <h3>Démo</h3>
+      </div>
+      <div class="exercice" name="ex">
+        <label for="">Donner la taille du tableau </label>
+        <input type="number" id="enter" />
+        <button id="reverse">Valider</button><br />
+        <label for="">Veuiller remplir le tableau</label>
+        <span id="pr"></span>
+        <button id="Trier">Trier</button><br />
+        <div class="rendu">
+          <p id="ed">Le tableau reafficher ici après son tri</p>
+        </div>
+      </div>
+      <div class="code">
+      <div class="titre-ar">
+        <h3>Code source</h3>
+      </div>
+      <div class="exercice">
+        <p>
+          let i = 0 ;
+          let arrt=[];
+          document.getElementById('reverse').onclick=function(){
+              let inp=""; 
+                let caros=document.getElementById('enter').value ;
+                if(caros<=10){
+                  for (i; i <caros;i++) {
+                    inp=inp+"<input type=number id=en"+i+">"
+                    document.getElementById('pr').innerHTML=inp       
+                  }
+                }
+                else{
+                  document.getElementById('pr').innerHTML="enter valeur entre 1 et 10"
+                }
+              }
+              document.getElementById('Trier').onclick=function(){
+                let aff="";
+                  for(let k=0;k<i;k++){
+                      arrt.push(document.getElementById('en'+k).value);
+                  }
+                  for(let j=0;j<i;j++){
+                    for(let n=j;n<=i;n++){
+                      if(arrt[j]-arrt[n]>0){
+                        let c=arrt[n];
+                        arrt[n]=arrt[j];
+                        arrt[j]=c;
+                      }
+                    }
+                    aff=aff+"<td>"+arrt[j]+"</td>"
+                  document.getElementById('ed').innerHTML="<table><tr>"+aff+"</tr></table><style>table, th, td {border: 1px solid black;border-collapse: collapse;}table{width:100%}</style>" 
+                  
+                  }
+                  
+              }</p>
+      </div>
+    </div>
+    </section>
+    <script src="index copy 3.js"></script>
+  </body>
+</html>
